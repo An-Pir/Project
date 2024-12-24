@@ -41,7 +41,7 @@ function Main() {
         <>
             <div className="flex flex-col min-h-screen">
                 <main className="flex-grow p-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                         {products.map((item) => (
                             <div
                                 key={item._id}
@@ -55,10 +55,13 @@ function Main() {
                                 <h3 className="mt-4 text-lg font-semibold text-gray-800">
                                     {item.productName}
                                 </h3>
+                                <p className="mt-4 text-sm font-regular text-gray-400">
+                                    {item.description}
+                                </p>
                                 <div className="flex justify-between items-center mt-2">
-                                    <span className="text-xl text-gray-900">${item.price}</span>
+                                    <span className="text-2xl text-red-900">{item.price} руб.</span>
                                     <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-                                        Add to Cart
+                                        В корзину
                                     </button>
                                 </div>
                             </div>
